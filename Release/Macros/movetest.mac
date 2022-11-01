@@ -1,0 +1,6 @@
+#turbo
+#include move.inc
+
+Sub Main
+/Call MovetoLoc 392 1390
+/return

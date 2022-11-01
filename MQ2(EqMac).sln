@@ -1,0 +1,92 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MQ2Main", "MQ2Main\MQ2Main.vcxproj", "{2A0A06A4-E9C6-4229-82EE-BD2D4E0A7221}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MQ2Bzsrch", "MQ2Bzsrch\MQ2Bzsrch.vcxproj", "{D43171FB-8208-4E52-860A-6BAE2A2FA573}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2A0A06A4-E9C6-4229-82EE-BD2D4E0A7221} = {2A0A06A4-E9C6-4229-82EE-BD2D4E0A7221}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MQ2ChatWnd", "MQ2ChatWnd\MQ2ChatWnd.vcxproj", "{7BE95E09-8E03-4D64-8448-95AA4706C779}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2A0A06A4-E9C6-4229-82EE-BD2D4E0A7221} = {2A0A06A4-E9C6-4229-82EE-BD2D4E0A7221}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MQ2EQBugFix", "MQ2EQBugFix\MQ2EQBugFix.vcxproj", "{3AAF0048-C161-4C9C-8FF0-D8B783E78FBD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2A0A06A4-E9C6-4229-82EE-BD2D4E0A7221} = {2A0A06A4-E9C6-4229-82EE-BD2D4E0A7221}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MQ2HUD", "MQ2HUD\MQ2HUD.vcxproj", "{F3077B9F-C8B6-441B-9A21-C76EA07CCE2B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2A0A06A4-E9C6-4229-82EE-BD2D4E0A7221} = {2A0A06A4-E9C6-4229-82EE-BD2D4E0A7221}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MQ2ItemDisplay", "MQ2ItemDisplay\MQ2ItemDisplay.vcxproj", "{B01DC978-C286-4330-B100-069CB13ECF8B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2A0A06A4-E9C6-4229-82EE-BD2D4E0A7221} = {2A0A06A4-E9C6-4229-82EE-BD2D4E0A7221}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MQ2Labels", "MQ2Labels\MQ2Labels.vcxproj", "{CD738379-0EE1-4A2A-AA7D-F17CF6BFBC98}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2A0A06A4-E9C6-4229-82EE-BD2D4E0A7221} = {2A0A06A4-E9C6-4229-82EE-BD2D4E0A7221}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MQ2MapWnd", "MQ2MapWnd\MQ2MapWnd.vcxproj", "{0E317AE7-F797-4CA6-B757-7977D9DB6BF9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2A0A06A4-E9C6-4229-82EE-BD2D4E0A7221} = {2A0A06A4-E9C6-4229-82EE-BD2D4E0A7221}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MQ2SpellMenu", "MQ2SpellMenu\MQ2SpellMenu.vcxproj", "{6DD7C3D8-2783-47C2-9AC9-0724C441C56E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2A0A06A4-E9C6-4229-82EE-BD2D4E0A7221} = {2A0A06A4-E9C6-4229-82EE-BD2D4E0A7221}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Release|Win32 = Release|Win32
+		Debug|Win32 = Debug|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2A0A06A4-E9C6-4229-82EE-BD2D4E0A7221}.Release|Win32.ActiveCfg = Release|Win32
+		{2A0A06A4-E9C6-4229-82EE-BD2D4E0A7221}.Release|Win32.Build.0 = Release|Win32
+		{2A0A06A4-E9C6-4229-82EE-BD2D4E0A7221}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2A0A06A4-E9C6-4229-82EE-BD2D4E0A7221}.Debug|Win32.Build.0 = Debug|Win32
+		{D43171FB-8208-4E52-860A-6BAE2A2FA573}.Release|Win32.ActiveCfg = Release|Win32
+		{D43171FB-8208-4E52-860A-6BAE2A2FA573}.Release|Win32.Build.0 = Release|Win32
+		{D43171FB-8208-4E52-860A-6BAE2A2FA573}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D43171FB-8208-4E52-860A-6BAE2A2FA573}.Debug|Win32.Build.0 = Debug|Win32
+		{7BE95E09-8E03-4D64-8448-95AA4706C779}.Release|Win32.ActiveCfg = Release|Win32
+		{7BE95E09-8E03-4D64-8448-95AA4706C779}.Release|Win32.Build.0 = Release|Win32
+		{7BE95E09-8E03-4D64-8448-95AA4706C779}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7BE95E09-8E03-4D64-8448-95AA4706C779}.Debug|Win32.Build.0 = Debug|Win32
+		{3AAF0048-C161-4C9C-8FF0-D8B783E78FBD}.Release|Win32.ActiveCfg = Release|Win32
+		{3AAF0048-C161-4C9C-8FF0-D8B783E78FBD}.Release|Win32.Build.0 = Release|Win32
+		{3AAF0048-C161-4C9C-8FF0-D8B783E78FBD}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3AAF0048-C161-4C9C-8FF0-D8B783E78FBD}.Debug|Win32.Build.0 = Debug|Win32
+		{F3077B9F-C8B6-441B-9A21-C76EA07CCE2B}.Release|Win32.ActiveCfg = Release|Win32
+		{F3077B9F-C8B6-441B-9A21-C76EA07CCE2B}.Release|Win32.Build.0 = Release|Win32
+		{F3077B9F-C8B6-441B-9A21-C76EA07CCE2B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F3077B9F-C8B6-441B-9A21-C76EA07CCE2B}.Debug|Win32.Build.0 = Debug|Win32
+		{B01DC978-C286-4330-B100-069CB13ECF8B}.Release|Win32.ActiveCfg = Release|Win32
+		{B01DC978-C286-4330-B100-069CB13ECF8B}.Release|Win32.Build.0 = Release|Win32
+		{B01DC978-C286-4330-B100-069CB13ECF8B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B01DC978-C286-4330-B100-069CB13ECF8B}.Debug|Win32.Build.0 = Debug|Win32
+		{CD738379-0EE1-4A2A-AA7D-F17CF6BFBC98}.Release|Win32.ActiveCfg = Release|Win32
+		{CD738379-0EE1-4A2A-AA7D-F17CF6BFBC98}.Release|Win32.Build.0 = Release|Win32
+		{CD738379-0EE1-4A2A-AA7D-F17CF6BFBC98}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CD738379-0EE1-4A2A-AA7D-F17CF6BFBC98}.Debug|Win32.Build.0 = Debug|Win32
+		{0E317AE7-F797-4CA6-B757-7977D9DB6BF9}.Release|Win32.ActiveCfg = Release|Win32
+		{0E317AE7-F797-4CA6-B757-7977D9DB6BF9}.Release|Win32.Build.0 = Release|Win32
+		{0E317AE7-F797-4CA6-B757-7977D9DB6BF9}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0E317AE7-F797-4CA6-B757-7977D9DB6BF9}.Debug|Win32.Build.0 = Debug|Win32
+		{6DD7C3D8-2783-47C2-9AC9-0724C441C56E}.Release|Win32.ActiveCfg = Release|Win32
+		{6DD7C3D8-2783-47C2-9AC9-0724C441C56E}.Release|Win32.Build.0 = Release|Win32
+		{6DD7C3D8-2783-47C2-9AC9-0724C441C56E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6DD7C3D8-2783-47C2-9AC9-0724C441C56E}.Debug|Win32.Build.0 = Debug|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

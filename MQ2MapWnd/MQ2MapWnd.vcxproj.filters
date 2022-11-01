@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{a62e2054-467a-442c-94e2-52905a1d5bb9}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{fef8d04b-3c05-4572-b3c0-de579d04130d}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{1886d4b8-6933-483e-91d8-e05a802cae98}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Resource Files\Tga">
+      <UniqueIdentifier>{8f4d551a-40e5-435e-8388-815baeb86184}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\xml">
+      <UniqueIdentifier>{95849bf6-8921-44d4-8988-918a8793e222}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="MQ2MapWnd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\MQ2Plugin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="CMapToolbarWnd.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="CMapViewWnd.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="CEditLabelWnd.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="DX8_Util.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MQ2MapWnd.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\EQMac\uifiles\default\cart01.tga" />
+    <None Include="..\..\EQMac\uifiles\default\cart02.tga" />
+    <None Include="..\..\EQMac\uifiles\default\cart03.tga" />
+    <None Include="..\..\EQMac\uifiles\default\cart04.tga" />
+    <None Include="Resources\window_pieces04.tga">
+      <Filter>Resource Files\Tga</Filter>
+    </None>
+    <None Include="Resources\cart01.tga">
+      <Filter>Resource Files\Tga</Filter>
+    </None>
+    <None Include="Resources\cart02.tga">
+      <Filter>Resource Files\Tga</Filter>
+    </None>
+    <None Include="Resources\cart03.tga">
+      <Filter>Resource Files\Tga</Filter>
+    </None>
+    <None Include="Resources\cart04.tga">
+      <Filter>Resource Files\Tga</Filter>
+    </None>
+    <None Include="Resources\EQUI_BugReportWnd.xml">
+      <Filter>Resource Files\xml</Filter>
+    </None>
+    <None Include="Resources\EQUI_EditLabelWnd.xml">
+      <Filter>Resource Files\xml</Filter>
+    </None>
+    <None Include="Resources\EQUI_MapToolbarWnd.xml">
+      <Filter>Resource Files\xml</Filter>
+    </None>
+    <None Include="Resources\EQUI_MapViewWnd.xml">
+      <Filter>Resource Files\xml</Filter>
+    </None>
+    <None Include="xml2.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\EQUI.xml" />
+    <None Include="Resources\eqstr_en.txt" />
+  </ItemGroup>
+</Project>

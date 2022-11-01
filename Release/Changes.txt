@@ -1,0 +1,4 @@
+18 Jun 2013 by Eqmule
+- Fixed alot of stuff
+- SpellMenu is now Live for eqmac version of everquest
+

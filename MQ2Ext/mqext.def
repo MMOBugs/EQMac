@@ -1,0 +1,46 @@
+;--------------------------------------------------------------------
+; 
+; Module:
+;    mqext.def
+;--------------------------------------------------------------------
+
+EXPORTS
+
+;--------------------------------------------------------------------
+; These are the extensions exported by dll
+;--------------------------------------------------------------------
+
+    inv
+    pack
+    help
+    pchar
+    pspawn
+    pitem
+    pgroundspawn
+    pdoor
+    pspellbuff
+    pspell
+    pzone
+    pzoneinfo
+    plootcorpse
+    pactorinfo
+    plootwnd
+    ptradeskillwnd    
+    precipe
+    ppetinfownd 
+    pguildwnd
+    pguildmemberinfo
+    praidwnd
+    
+;   pcmdlist
+
+;--------------------------------------------------------------------
+;
+; these are the extension service functions provided for the debugger
+;
+;--------------------------------------------------------------------
+
+
+    CheckVersion
+    WinDbgExtensionDllInit
+    ExtensionApiVersion

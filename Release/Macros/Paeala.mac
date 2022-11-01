@@ -1,0 +1,218 @@
+| - Paeala.mac - Idea from kiola.mac
+| - This version By EqMule
+| - To demonstrate a combine macro for the eqmac version of MQ2
+| - This will take you to skill 46 in brewing
+| 
+| Open a brew barrel and your bags before you start this macro.
+| You can buy Packet of Paeala Sap from Sirekoth Eshe
+| in plane of knowledge at loc 110,266
+| he stands just outside the building to the right
+| when you cross bridge from soul binder
+| he is looking right at the main bank
+
+#turbo
+#event CombineFail "You lacked the skills to fashion the items together."
+#event CombineSuceed "You have fashioned the items together to create something new!"
+
+
+Sub Main
+
+/declare v61 int outer 0
+/declare t9 timer
+/declare slotfound int outer
+/declare WAITCOUNTER int outer 0
+
+:MakePaeala
+   :DoWaterFlask
+      /varset slotfound ${FindItem[=Water Flask].InvSlot}
+      /if (${slotfound}!=NULL) {
+          /echo we found a Water Flask in slot ${slotfound} 
+      } else {
+          /echo out of Water Flasks
+          /goto :Done
+      }
+      :retrywater
+      /varset WAITCOUNTER 0
+      /ctrl /itemnotify ${slotfound} leftmouseup
+      :WaitforCursorWater
+      /if (!${Cursor.ID}) {
+          /varcalc WAITCOUNTER (${WAITCOUNTER} + 1)
+          /if (${WAITCOUNTER}>5) {
+              /echo wait for Water Flask timed out
+              /goto :retrywater
+          }
+          /delay 1s
+          /echo waiting for Water Flask...
+          /goto :WaitforCursorWater
+      }
+      /if (${Cursor.Name.Equal[Water Flask]}) {
+          /echo wait finished we got ${Cursor.Name} on the cursor
+          |drop it into the enviro
+          /itemnotify in enviro
+      } else {
+          |crap this shouldnt happen
+          /echo we had a ${Cursor.Name} on the cursor...
+          /echo dropping it in inventory
+          /notify InventoryWindow IW_CharacterView leftmouseup
+          /delay 1s
+          /goto :DoWaterFlask
+      }
+   :DoBottle
+      |ok now do the Bottle
+      /varset slotfound ${FindItem[=Bottle].InvSlot}
+      /if (${slotfound}!=NULL) {
+          /echo we found a Bottle in slot ${slotfound}
+      } else {
+          /echo out of Bottles
+          /goto :Done
+      }
+      :retrybottle
+      /varset WAITCOUNTER 0
+      /ctrl /itemnotify ${slotfound} leftmouseup
+      :WaitforCursorBottle
+      /if (!${Cursor.ID}) {
+          /varcalc WAITCOUNTER (${WAITCOUNTER} + 1)
+          /if (${WAITCOUNTER}>5) {
+              /echo wait for Bottle timed out
+              /goto :retrybottle
+          }
+          /delay 1s
+          /echo waiting for Bottle...
+          /goto :WaitforCursorBottle
+      }
+      /if (${Cursor.Name.Equal[Bottle]}) {
+          /echo wait finished we got ${Cursor.Name} on the cursor
+          |drop it into the enviro
+          /itemnotify in enviro
+      } else {
+          |crap this shouldnt happen
+          /echo we had a ${Cursor.Name} on the cursor...
+          /echo dropping it in inventory
+          /notify InventoryWindow IW_CharacterView leftmouseup
+          /delay 1s
+          /goto :DoBottle
+      }
+   :DoPaealasap1
+      |ok now do the Packet of Paeala Sap 1
+      /varset slotfound ${FindItem[=Packet of Paeala Sap].InvSlot}
+      /if (${slotfound}!=NULL) {
+          /echo we found a Packet of Paeala Sap in slot ${slotfound}
+      } else {
+          /echo out of Packet of Paeala Saps
+          /goto :Done
+      }
+      :retryPaeala1
+      /varset WAITCOUNTER 0
+      /ctrl /itemnotify ${slotfound} leftmouseup
+      :WaitforCursorPaeala1
+      /if (!${Cursor.ID}) {
+          /varcalc WAITCOUNTER (${WAITCOUNTER} + 1)
+          /if (${WAITCOUNTER}>5) {
+              /echo wait for Packet of Paeala Sap timed out
+              /goto :retryPaeala1
+          }
+          /delay 1s
+          /echo waiting...
+          /goto :WaitforCursorPaeala1
+      }
+      /if (${Cursor.Name.Equal[Packet of Paeala Sap]}) {
+          /echo wait finished we got ${Cursor.Name} on the cursor
+          |drop it into the enviro
+          /itemnotify in enviro
+      } else {
+          |crap this shouldnt happen
+          /echo we had a ${Cursor.Name} on the cursor...
+          /echo dropping it in inventory
+          /notify InventoryWindow IW_CharacterView leftmouseup
+          /delay 1s
+          /goto :DoPaealasap1
+      }
+   :DoPaealasap2
+      |ok now do the Packet of Paeala Sap 2
+      /varset slotfound ${FindItem[=Packet of Paeala Sap].InvSlot}
+      /if (${slotfound}!=NULL) {
+          /echo we found a Packet of Paeala Sap in slot ${slotfound}
+      } else {
+          /echo out of Packet of Paeala Saps
+          /goto :Done
+      }
+      :retryPaeala2
+      /varset WAITCOUNTER 0
+      /ctrl /itemnotify ${slotfound} leftmouseup
+      :WaitforCursorPaeala2
+      /if (!${Cursor.ID}) {
+          /varcalc WAITCOUNTER (${WAITCOUNTER} + 1)
+          /if (${WAITCOUNTER}>5) {
+              /echo wait for Packet of Paeala Sap timed out
+              /goto :retryPaeala2
+          }
+          /delay 1s
+          /echo waiting...
+          /goto :WaitforCursorPaeala2
+      }
+      /if (${Cursor.Name.Equal[Packet of Paeala Sap]}) {
+          /echo wait finished we got ${Cursor.Name} on the cursor
+          |drop it into the enviro
+          /itemnotify in enviro
+      } else {
+          |crap this shouldnt happen
+          /echo we had a ${Cursor.Name} on the cursor...
+          /echo dropping it in inventory
+          /notify InventoryWindow IW_CharacterView leftmouseup
+          /delay 1s
+          /goto :DoPaealasap2
+      }
+   :DoCombine
+      /varset v61 0 
+      /doevents flush
+      /varset t9 30s
+      /combine enviro
+
+   :DropPaeala
+      /doevents
+      /if (${t9}==0) {
+         /echo timer was 0
+         /goto :DoCombine
+      }
+      /if (${v61}==0) {
+         /goto :DropPaeala
+      }
+      /echo combine time 30 - ${t9} 
+      /doevents flush
+   :WaitCursorBack
+      /if (!${Cursor.ID}) {
+         /delay 0
+         /goto :WaitCursorBack
+      }
+      /delay 2
+   :retrydrop
+      /varset t9 4s
+      /notify InventoryWindow IW_CharacterView leftmouseup
+      /delay 1
+   :WaitCursorEmpty
+      /if (${Cursor.ID}) {
+         /if (${t9}==0) {
+             /echo timed out waiting for empty cursor
+             /goto :retrydrop
+         }
+         /delay 0
+         /goto :WaitCursorEmpty
+      }
+      /goto :MakePaeala
+   :Done
+      | yes /envclose WILL close the brew barrel (or any other open worldcontainer)
+      | but I want to add some code here to empty it first
+      | just in case we have stuff in it, so for now its remarked.
+      |/envclose
+/return
+
+Sub Event_CombineFail
+   |we got to set this to 1 even when failed cause
+   /echo we get a bottle back
+   /varset v61 1
+/return 
+
+Sub Event_CombineSuceed 
+   /echo we succeded
+   /varset v61 1
+/return 
